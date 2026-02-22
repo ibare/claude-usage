@@ -1,0 +1,24 @@
+name: ClaudeUsage
+options:
+  bundleIdPrefix: com.mintae
+  deploymentTarget:
+    macOS: "15.0"
+  xcodeVersion: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: "6"
+    MACOSX_DEPLOYMENT_TARGET: "15.0"
+targets:
+  ClaudeUsage:
+    type: application
+    platform: macOS
+    sources:
+      - Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mintae.ClaudeUsage
+        INFOPLIST_FILE: Info.plist
+        CODE_SIGN_ENTITLEMENTS: ClaudeUsage.entitlements
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_APP_SANDBOX: NO
+        SWIFT_STRICT_CONCURRENCY: complete
